@@ -1,0 +1,44 @@
+<div class="container mt-5 col-md-6">
+    <div class="card text-center bg-dark text-white">
+        <h5 class="card-header">Make Your Booking</h5>
+        <div class="card-body col-md-12 row">
+            <h5 class="card-title mb-3">Fill Out Form Below and Hit Book!</h5>
+
+            <!-- From Location -->
+            <div class="col-md-6 mb-3">
+                <label for="loc">Select From: </label>
+                <select class="form-control" [(ngModel)]='dataObject.location' name='loc' required>
+                    <option>Potchefstroom</option>
+                    <option>CapeTown</option>
+                    <option>Oudtshoorn</option>
+                </select>
+            </div>
+
+            <!-- To Destination -->
+            <div class="col-md-6">
+                <label for="des">Select To: </label>
+                <select class="form-control" [(ngModel)]='dataObject.destination' name="des" required>
+                    <option>Potchefstroom</option>
+                    <option>CapeTown</option>
+                    <option>Oudtshoorn</option>
+                </select>
+            </div>
+
+            <!-- Available Dates -->
+
+            <!-- Name -->
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]='dataObject.name' name='nme' required>
+            </div>
+
+            <!-- Contact Number -->
+            <div class="col-md-6 mt-3">
+                <input type="text" class="form-control" placeholder="Contact" [(ngModel)]='dataObject.contact' name='ctc' required>
+            </div>
+
+            <div class="col-md-12 mt-5">
+                <button type='button' class="btn btn-primary" (click)='submitBooking(dataObject)'>I Confirm Booking</button>
+            </div>
+        </div>
+    </div>
+</div>
